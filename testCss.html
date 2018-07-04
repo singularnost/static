@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<link href="./assets/css/tweenAnimation.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="context-center">
+				<button class="button">
+						<span>It's awesome,visit it</span>
+					</button>
+		</div>
+		
+	</body>
+	
+</html>
+<script type="text/javascript">
+		document.querySelector('.button').onmousemove = function (e) {
+			var x = e.pageX - e.target.offsetLeft;
+			var y = e.pageY - e.target.offsetTop;
+			e.target.style.setProperty('--x', x + 'px');
+			e.target.style.setProperty('--y', y + 'px');
+		};
+</script>
